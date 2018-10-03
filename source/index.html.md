@@ -6,6 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - ruby
   - python
   - javascript
+  - php
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -51,12 +52,12 @@ curl "api_endpoint_here"
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
+
 ```php
     <?php
         Code snippet
     ?>
    ```
-
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
