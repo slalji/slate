@@ -20,9 +20,9 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the WiseAPI! You can use our API to access WiseAPI endpoints, which can get information on various cats, kittens, and breeds in our database.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in Shell, Ruby, Python, JavaScript and PHP! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
@@ -55,15 +55,15 @@ let api = kittn.authorize('meowmeowmeow');
 
 ```php
     <?php
-        Code snippet
+       WiseAPI
     ?>
    ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+WiseAPI uses API keys to allow access to the API. You can register a new WiseAPI key at our [developer portal](http://wisecrack.ca/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+WiseAPI expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
@@ -71,9 +71,9 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# WiseAPI
 
-## Get All Kittens
+## Get All WiseAPI
 
 ```ruby
 require 'kittn'
@@ -102,7 +102,9 @@ let kittens = api.kittens.get();
 ```
 ```php
     <?php
-        Code snippet
+    curl "http://example.com/api/kittens/2"
+    -H "Authorization: meowmeowmeow"
+    $all = response;
     ?>
     ```
 
