@@ -10,7 +10,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - Documentation Powered by Slate
 
 includes:
   - errors
@@ -20,7 +20,7 @@ search: true
 
 # Introduction
 
-Welcome to the WiseAPI! You can use our API to access WiseAPI endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Selcom API! You can use our API to access Selcom API endpoints, which can get information on various Selcom Payment Gateway API.
 
 We have language bindings in Shell, Ruby, Python, JavaScript and PHP! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -45,35 +45,55 @@ api = kittn.authorize('meowmeowmeow')
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: Bearer meowmeowmeow"
 ```
 
 ```javascript
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-
+```
 ```php
     <?php
-       WiseAPI
+       $request = new HttpRequest();
+$request->setUrl('http://dev.selcom.net/');
+$request->setMethod(HTTP_METH_POST);
+
+$request->setHeaders(array(
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'authorization' => 'Bearer meowmeowmeow'
+));
+
+$request->setRequestUrl('http://127.0.0.1/selcomJWT/jwt_decoder.php');
+$request->setRequestMethod('POST');
+$request->setBody($body);
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
     ?>
    ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-WiseAPI uses API keys to allow access to the API. You can register a new WiseAPI key at our [developer portal](http://wisecrack.ca/developers).
+Selcom API uses API keys to allow access to the API. You can register a new Selcom API key at our [developer portal](http://197.168.0.1/developers).
 
-WiseAPI expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Selcom API expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: Bearer meowmeowmeow`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# WiseAPI
+# Selcom API
 
-## Get All WiseAPI
+## Get All Selcom API
 
 ```ruby
 require 'kittn'
@@ -103,7 +123,7 @@ let kittens = api.kittens.get();
 ```php
     <?php
     curl "http://example.com/api/kittens/2"
-    -H "Authorization: meowmeowmeow"
+    -H "Authorization: Bearer meowmeowmeow"
     $all = response;
     ?>
     ```
