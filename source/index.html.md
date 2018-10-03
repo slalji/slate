@@ -51,7 +51,12 @@ curl "api_endpoint_here"
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-```
+```php
+    <?php
+        Code snippet
+    ?>
+   ```
+
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
