@@ -94,6 +94,11 @@ const kittn = require('kittn');
 let api = kittn.authorize('meowmeowmeow');
 let kittens = api.kittens.get();
 ```
+```php
+    <?php
+        Code snippet
+    ?>
+    ```
 
 > The above command returns JSON structured like this:
 
